@@ -11,6 +11,7 @@
 		63F484112C1CEF05006B55C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F484102C1CEF05006B55C4 /* ContentView.swift */; };
 		63F484132C1CEF06006B55C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63F484122C1CEF06006B55C4 /* Assets.xcassets */; };
 		63F484162C1CEF06006B55C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63F484152C1CEF06006B55C4 /* Preview Assets.xcassets */; };
+		63F4841E2C1CEF32006B55C4 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 63F4841D2C1CEF32006B55C4 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		63F484102C1CEF05006B55C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		63F484122C1CEF06006B55C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63F484152C1CEF06006B55C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		63F4841F2C1CF044006B55C4 /* TCASharedState.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TCASharedState.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63F4841E2C1CEF32006B55C4 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +54,7 @@
 		63F4840D2C1CEF05006B55C4 /* TCASharedState */ = {
 			isa = PBXGroup;
 			children = (
+				63F4841F2C1CF044006B55C4 /* TCASharedState.entitlements */,
 				63F4840E2C1CEF05006B55C4 /* TCASharedStateApp.swift */,
 				63F484102C1CEF05006B55C4 /* ContentView.swift */,
 				63F484122C1CEF06006B55C4 /* Assets.xcassets */,
@@ -83,6 +87,9 @@
 			dependencies = (
 			);
 			name = TCASharedState;
+			packageProductDependencies = (
+				63F4841D2C1CEF32006B55C4 /* ComposableArchitecture */,
+			);
 			productName = TCASharedState;
 			productReference = 63F4840B2C1CEF05006B55C4 /* TCASharedState.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +118,9 @@
 				Base,
 			);
 			mainGroup = 63F484022C1CEF05006B55C4;
+			packageReferences = (
+				63F4841C2C1CEF32006B55C4 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 63F4840C2C1CEF05006B55C4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -269,6 +279,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TCASharedState/TCASharedState.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TCASharedState/Preview Content\"";
@@ -287,6 +298,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.humblehacker.TCASharedState;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -298,6 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TCASharedState/TCASharedState.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TCASharedState/Preview Content\"";
@@ -316,6 +330,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.humblehacker.TCASharedState;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -344,6 +360,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		63F4841C2C1CEF32006B55C4 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.11.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		63F4841D2C1CEF32006B55C4 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63F4841C2C1CEF32006B55C4 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 63F484032C1CEF05006B55C4 /* Project object */;
 }

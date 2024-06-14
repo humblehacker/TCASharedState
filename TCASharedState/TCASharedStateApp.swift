@@ -1,17 +1,18 @@
-//
-//  TCASharedStateApp.swift
-//  TCASharedState
-//
-//  Created by David Whetstone on 6/14/24.
-//
-
+import ComposableArchitecture
 import SwiftUI
 
 @main
 struct TCASharedStateApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(
+                store: Store(
+                    initialState: ContentReducer.State(),
+                    reducer: {
+                        ContentReducer()._printChanges()
+                    }
+                )
+            )
         }
     }
 }
