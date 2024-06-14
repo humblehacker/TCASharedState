@@ -19,7 +19,7 @@ struct ContentView: View {
 @Reducer
 struct ContentReducer {
     @ObservableState
-    struct State {
+    struct State: Equatable {
         @Shared(.appStorage("foo")) var foo = 0
         @Shared(.appStorage("bar")) var bar = 0
     }
